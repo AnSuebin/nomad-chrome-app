@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500&display=swap');
+
+.hidden {
+  display: none;
+}
+
+.bgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+  object-fit: cover;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 0.8fr 2fr 30px 0.8fr;
+  grid-template-areas:
+    'weather-container .'
+    '. todo-container'
+    'login-container login-container'
+    'clock clock';
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  color: whitesmoke;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#weather-container {
+  grid-area: weather-container;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#weather-container #city {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#weather-container h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.todo-container {
+  grid-area: todo-container;
+}
+
+.todo-container #todo-form input {
+  background-color: rgba(52, 51, 51, 0.3);
+  width: 200px;
+  padding: 5px 10px;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+}
+
+.todo-container ul {
+  border: 1px solid whitesmoke;
+  background-color: rgba(52, 51, 51, 0.3);
+  border-radius: 10px;
+  padding: 0px 10px;
+  width: 200px;
+}
+
+.todo-container ul li {
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  justify-content: space-between;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.todo-container ul li button {
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+  margin-left: 10px;
+}
+
+.todo-container #todo-form input::placeholder {
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.login-container {
+  grid-area: login-container;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container #login-form input:first-child {
+  background-color: rgba(52, 51, 51, 0.3);
+  width: 200px;
+  padding: 5px 10px;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+}
+
+.login-container #login-form input:first-child::placeholder {
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.login-container #login-form input:last-child {
+  background-color: whitesmoke;
+  color: rgb(52, 51, 51);
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-left: 3px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.login-container #greeting {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#clock {
+  grid-area: clock;
+  font-size: 80px;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
